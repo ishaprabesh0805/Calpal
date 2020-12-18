@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.calpal">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,16 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.example.calpal.Views.SplashActivity"></activity>
 
         <meta-data
             android:name="com.google.android.gms.vision"
-            android:value="@integer/google_play_services_version">
-        </meta-data>
-
+            android:value="@integer/google_play_services_version"></meta-data>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/API_KEY">
-        </meta-data>
+            android:value="@string/API_KEY"></meta-data>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -30,6 +28,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>
