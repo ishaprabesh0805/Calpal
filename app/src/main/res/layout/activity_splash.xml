@@ -16,18 +16,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/calpal_background" />
+        app:srcCompat="@drawable/calpal_background"
+        android:contentDescription="@string/calpal_background_splash" />
+
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:adjustViewBounds="false"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:adjustViewBounds="true"
         android:background="#00FFFFFF"
+        android:contentDescription="@string/calpal_logo"
         android:cropToPadding="false"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,4 +38,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/calpal_logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
