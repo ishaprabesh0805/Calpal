@@ -2,9 +2,12 @@ package com.example.calpal.activities;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.graphics.Typeface;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,9 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
-        signInButton.setColorScheme(SignInButton.COLOR_LIGHT);
+        Button signInButton = findViewById(R.id.sign_in_button);
     }
 
     @Override
