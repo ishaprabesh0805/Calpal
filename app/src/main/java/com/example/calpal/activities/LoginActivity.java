@@ -5,15 +5,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.calpal.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -37,6 +40,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         // Set the dimensions of the sign-in button.
         Button signInButton = findViewById(R.id.sign_in_button);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // Check for existing Google Sign In account, if the user is already signed in
+        // the GoogleSignInAccount will be non-null.
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        updateUI(account);
+    }
+
+    private void updateUI(@Nullable GoogleSignInAccount account) {
+        if (account != null) {
+            // If account is not null, means user was previously logged in => update UI accordingly
+            // i.e. hide the sign in button, launch your main activity, whatever
+            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
+        }
+        else {
+            // If account is null => user was not previously logged in. Update UI to display
+            // Google sign in button, etc.
+
+            findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override
