@@ -14,6 +14,10 @@
         <activity android:name="com.example.calpal.Views.SplashActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name="com.example.calpal.activities.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
 
         <meta-data
             android:name="com.google.android.gms.vision"
