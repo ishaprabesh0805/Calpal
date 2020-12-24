@@ -32,13 +32,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         //Views
 
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
-        findViewById(R.id.sign_out_button).setOnClickListener(this);
+/*        findViewById(R.id.sign_out_button).setOnClickListener(this);*/
 
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
@@ -88,14 +88,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    public void onBackPressed() {
+        moveTaskToBack(false);
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_in_button:
                 signIn();
                 break;
-            case R.id.sign_out_button:
+/*            case R.id.sign_out_button:
                 signOut();
-                break;
+                break;*/
         }
     }
 
@@ -116,6 +121,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN); //prompts user for email, pwd, scopes, etc.
+        Log.w(TAG, "starting sign in");
     }
 
 

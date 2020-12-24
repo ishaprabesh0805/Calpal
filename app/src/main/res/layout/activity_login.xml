@@ -51,6 +51,7 @@
         android:drawableStart="@drawable/btn_google_signin_light_normal__9"
         android:drawableLeft="@drawable/btn_google_signin_light_normal__9"
         android:focusable="true"
+        android:onClick="onClick"
         android:text="@string/sign_in_text"
         android:textAllCaps="false"
         android:textIsSelectable="false"
