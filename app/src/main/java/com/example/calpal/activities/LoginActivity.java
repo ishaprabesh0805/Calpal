@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     /*
      * Deletes the account connected to the app
      */
-/*    private void signOut() {
+    private void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                     @Override
@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         updateUI(null);
                     }
                 });
-    }*/
+    }
 
 
     private void signIn() {
