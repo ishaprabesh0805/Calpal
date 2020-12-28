@@ -4,4 +4,6 @@
     <string name="calpal_background_splash">Calpal_Background_Splash</string>
     <string name="calpal_logo">Calpal_Logo</string>
     <string name="sign_in_text">Continue with Google\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

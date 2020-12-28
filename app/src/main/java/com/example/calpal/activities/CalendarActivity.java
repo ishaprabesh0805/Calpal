@@ -32,6 +32,7 @@ public class CalendarActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.addEventButton:
+                        //send intent to addEvent.java
                         break;
                 }
             }
